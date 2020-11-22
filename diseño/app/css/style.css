@@ -1,0 +1,16 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #141414;
+}
+.main__header {
+	background: #000;
+	height: 80px;
+	padding: 0px 40px;
+	display: flex;
+	align-items: center;
+}
