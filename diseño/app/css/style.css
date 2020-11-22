@@ -1,16 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 * {
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
-body {
+body, html {
 	background-color: #141414;
+	width: 100vw;
+	height: 100vh;
 }
-.main__header {
-	background: #000;
-	height: 80px;
+.header {
+	background: linear-gradient(to bottom, #000000, #141414);
+	height: 70px;
 	padding: 0px 40px;
 	display: flex;
 	align-items: center;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.main__title {
+	color: #fff;
+	font-size: 50px;
+	margin: 50px 0 20px;
+	font-weight: 400;
+	text-align: center;
+}
+.main__profiles {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.main__profiles__list {
+	padding: 0px;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.profile {
+	width: 136px;
+	height: 212px;
+	margin-right: 27px;
+}
+@media (max-width: 800px ) {
+	.main__title {
+		transform: scale(0.7);		
+	}
+	.profile {
+		transform: scale(0.7);	
+		margin-right: 5px;
+	}
+}
+.profile:last-child {
+	margin: 0px;
+}
+.profile__link:hover {
+	text-decoration: none;
+}
+
+.profile__link:hover .profile__content__img{
+	box-shadow: inset 0 0 0 3px white;
+}
+.profile__link:hover .profile__username {
+	color: white;
+	font-weight: bold;
+}
+.profile__content__img {
+	width: 136px;
+	height: 136px;
+	overflow: hidden;
+	border-radius: 4px;
+}
+.profile__img {
+	width: 100%;
+}
+.profile__username {
+	width: 100%;
+	display: block;
+	color: grey;
+	text-align: center;
+	margin-top: 12px;
+	font-weight: 500px;
+	font-size: 18px;
+}
+.main__profiles_button_admin {
+	background: none;
+	border: 1px solid grey;
+	text-transform: uppercase;
+	font-size: 16px;
+	letter-spacing: 2px;
+	font-weight: 300;
+	padding: 5px 20px;
+	color: grey;
+	margin: 25px auto;
+}
+.main__profiles_button_admin:hover {
+	color: white;
+	border-color: white;
 }
